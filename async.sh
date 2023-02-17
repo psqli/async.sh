@@ -21,8 +21,8 @@ async() { cat >$(get_promise_path $1); }
 # Wait for data and remove the FIFO file
 await() { cat <$(get_promise_path $1); rm $(get_promise_path $1); }
 
-ready_any() {} # TODO: use has_data
-ready_all() {} # TODO: use has_data
+#ready_any() {} # TODO: use has_data
+#ready_all() {} # TODO: use has_data
 
 # Tests
 # ==============================================================================
