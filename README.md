@@ -5,10 +5,13 @@ Example:
 ```sh
 . async.sh # include async.sh
 promise=$(create_promise)
-sleep 2 && echo Test | async $promise &
-echo "Sleeping..."
-echo "Result = $(await $promise)"
+sleep 1 | async $promise &
+echo "Promise is running
+await $promise
+echo "Promise is ready"
 ```
+
+See `example.sh` for another example.
 
 It's also possible to wait for all promises of a set to become ready (by using
 `ready_all`), or for the first promise to be ready among the set (by using
